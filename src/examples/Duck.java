@@ -9,18 +9,37 @@ import javax.sound.sampled.Clip;
 public class Duck {
 
 	private String favoriteFood;
+	public String color;
 	private int lifeExpectancy;
-	
+	public boolean isPoison;
+	private static int numberOfCreations;
 
 	public Duck(String favoriteFood, int lifeExpectancy) {
 		this.favoriteFood = favoriteFood;
 		this.lifeExpectancy = lifeExpectancy;
 	}
 
-	public void waddle() {
-		lifeExpectancy++;
-		System.out.println("waddle waddle");
-	}
+	
+public Duck() {
+	numberOfCreations++;
+	if(numberOfCreations%2==0) {
+		this.color="white";}
+	else {this.color="black";}
+		}
+public String getColor() {
+	return this.color;
+}
+
+public void waddle() {
+	lifeExpectancy++;
+	System.out.println("waddle waddle");
+}
+	
+public static int getNumberOfCreations() {
+	
+	return numberOfCreations;
+}
+
 
 	@Override
 	public String toString() {
