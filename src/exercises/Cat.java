@@ -19,7 +19,6 @@ public class Cat {
 		else
 			System.out.println("my name is " + name);
 	}
-
 	void kill() {
 		lives--;
 		if (lives > 0)
@@ -27,17 +26,28 @@ public class Cat {
 		else if (lives < 0)
 			System.out.println("that's overkill yo!");
 		else
-			System.out.println("DEAD CAT :(");
+			System.out.println("DEAD CAT :(");;
 	}
 
 	public static void main(String[] args) {
 		/* Do the following things without changing the Cat class */
 
 		// 1. Make the Cat meow
-		
+		Cat c1 = new Cat("Cane");
+		c1.meow();
 		// 2. Get the Cat to print it's name
-
+        c1.printName();
 		// 3. Kill the Cat!
+c1.kill();
+c1.kill();
+c1.kill();
+c1.kill();
+c1.kill();
+c1.kill();
+c1.kill();
+c1.kill();
+c1.kill();
+c1.kill();
 
 	}
 }
